@@ -1,0 +1,39 @@
+{
+  "name": "ternink-movin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "e2e:install": "playwright install chromium",
+    "e2e": "playwright test tests/e2e",
+    "e2e:ui": "playwright test tests/e2e --ui",
+    "e2e:ci": "playwright install chromium && playwright test tests/e2e",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "package:source": "node scripts/package-source.mjs",
+    "validate:source-zip": "node scripts/validate-source-zip.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/plugin-dialog": "^2.7.1",
+    "@tauri-apps/plugin-fs": "^2.5.1",
+    "fflate": "^0.8.3",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@tauri-apps/cli": "^2.11.2",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.1.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.0.15"
+  }
+}
